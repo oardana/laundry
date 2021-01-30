@@ -1481,7 +1481,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_formMouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
-        // TODO add your handling code here:
         if(kondisi == false){
             showhide(menu, kondisi);
             SwingUtilities.updateComponentTreeUI(this);
@@ -1539,7 +1538,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_tabeluserMouseClicked
 
     private void resetuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetuserActionPerformed
-        // TODO add your handling code here:
         reset();
         edituser.setEnabled(false);
         hapususer.setEnabled(false);
@@ -1548,7 +1546,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_resetuserActionPerformed
 
     private void tabelpetugasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelpetugasMouseClicked
-        // TODO add your handling code here:
         int baristabelpetugas = tabelpetugas.getSelectedRow();
         
         kodepetugas.setText(String.valueOf(tabelpetugas.getValueAt(baristabelpetugas, 0)));
@@ -1569,8 +1566,8 @@ public class admin extends JFrame {
             control_petugas.refreshPetugas(tabelpetugas);
             reset();
             control_petugas.autoNumberPetugas(kodepetugas);
-            control_petugas.refreshJcomboPetugas(tambah.petugas);
-            control_petugas.refreshJcomboPetugas(edit.petugas);
+            control_petugas.refreshJcomboPetugas(addorder.petugas);
+            control_petugas.refreshJcomboPetugas(editorder.petugas);
         }
     }//GEN-LAST:event_simpanpetugasActionPerformed
 
@@ -1594,7 +1591,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_editpetugasActionPerformed
 
     private void hapuspetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapuspetugasActionPerformed
-        // TODO add your handling code here:
         control_petugas.hapusPetugas(kodepetugas.getText());
         control_petugas.refreshPetugas(tabelpetugas);
         reset();
@@ -1618,7 +1614,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_resetpetugasActionPerformed
 
     private void tabellayananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabellayananMouseClicked
-        // TODO add your handling code here:
         int baristabellayanan = tabellayanan.getSelectedRow();
         kodelayanan.setText(String.valueOf(tabellayanan.getValueAt(baristabellayanan, 0)));
         jenislayanan.setText(String.valueOf(tabellayanan.getValueAt(baristabellayanan, 1)));
@@ -1636,10 +1631,9 @@ public class admin extends JFrame {
             control_layanan.refreshLayanan(tabellayanan);
             reset();
             control_layanan.autoNumberLayanan(kodelayanan);
-            control_layanan.refreshJcomboLayanan(tambah.layanan);
-            control_layanan.refreshJcomboLayanan(edit.layanan);
+            control_layanan.refreshJcomboLayanan(addorder.layanan);
+            control_layanan.refreshJcomboLayanan(editorder.layanan);
         }
-        
     }//GEN-LAST:event_simpanlayananActionPerformed
 
     private void editlayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editlayananActionPerformed
@@ -1653,13 +1647,12 @@ public class admin extends JFrame {
             hapuslayanan.setEnabled(false);
             simpanlayanan.setEnabled(true);
             control_layanan.autoNumberLayanan(kodelayanan);
-            control_layanan.refreshJcomboLayanan(tambah.layanan);
-            control_layanan.refreshJcomboLayanan(edit.layanan);
+            control_layanan.refreshJcomboLayanan(addorder.layanan);
+            control_layanan.refreshJcomboLayanan(editorder.layanan);
         }
     }//GEN-LAST:event_editlayananActionPerformed
 
     private void hapuslayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapuslayananActionPerformed
-        // TODO add your handling code here:
         control_layanan.hapusLayanan(kodelayanan.getText());
         control_layanan.refreshLayanan(tabellayanan);
         reset();
@@ -1667,8 +1660,8 @@ public class admin extends JFrame {
         hapuslayanan.setEnabled(false);
         simpanlayanan.setEnabled(true);
         control_layanan.autoNumberLayanan(kodelayanan);
-        control_layanan.refreshJcomboLayanan(tambah.layanan);
-        control_layanan.refreshJcomboLayanan(edit.layanan);
+        control_layanan.refreshJcomboLayanan(addorder.layanan);
+        control_layanan.refreshJcomboLayanan(editorder.layanan);
     }//GEN-LAST:event_hapuslayananActionPerformed
 
     private void resetlayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetlayananActionPerformed
@@ -1681,9 +1674,7 @@ public class admin extends JFrame {
     }//GEN-LAST:event_resetlayananActionPerformed
 
     private void tabelbiayaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelbiayaMouseClicked
-        // TODO add your handling code here:
-        int baristabelbiaya = tabelbiaya.getSelectedRow();
-        
+        int baristabelbiaya = tabelbiaya.getSelectedRow();        
         kodebiaya.setText(String.valueOf(tabelbiaya.getValueAt(baristabelbiaya, 0)));
         keterangan.setText(String.valueOf(tabelbiaya.getValueAt(baristabelbiaya, 1)));
         biaya.setText(String.valueOf(tabelbiaya.getValueAt(baristabelbiaya, 2)));
@@ -1700,13 +1691,12 @@ public class admin extends JFrame {
             control_biaya.refreshBiaya(tabelbiaya);
             reset();
             control_biaya.autoNumberBiaya(kodebiaya);
-            control_biaya.refreshJcomboBiaya(tambah.biayahari);
-            control_biaya.refreshJcomboBiaya(edit.biayahari);
+            control_biaya.refreshJcomboBiaya(addorder.biayahari);
+            control_biaya.refreshJcomboBiaya(editorder.biayahari);
         }
     }//GEN-LAST:event_simpanbiayaActionPerformed
 
     private void editbiayaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editbiayaActionPerformed
-        // TODO add your handling code here:
         control_biaya.ubahBiaya(kodebiaya.getText(), keterangan.getText(), biaya.getText());
         control_biaya.refreshBiaya(tabelbiaya);
         reset();
@@ -1714,8 +1704,8 @@ public class admin extends JFrame {
         hapusbiaya.setEnabled(false);
         simpanbiaya.setEnabled(true);
         control_biaya.autoNumberBiaya(kodebiaya);
-        control_biaya.refreshJcomboBiaya(tambah.biayahari);
-        control_biaya.refreshJcomboBiaya(edit.biayahari);
+        control_biaya.refreshJcomboBiaya(addorder.biayahari);
+        control_biaya.refreshJcomboBiaya(editorder.biayahari);
     }//GEN-LAST:event_editbiayaActionPerformed
 
     private void hapusbiayaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusbiayaActionPerformed
@@ -1727,23 +1717,21 @@ public class admin extends JFrame {
         hapusbiaya.setEnabled(false);
         simpanbiaya.setEnabled(true);
         control_biaya.autoNumberBiaya(kodebiaya);
-        control_biaya.refreshJcomboBiaya(tambah.biayahari);
-        control_biaya.refreshJcomboBiaya(edit.biayahari);
+        control_biaya.refreshJcomboBiaya(addorder.biayahari);
+        control_biaya.refreshJcomboBiaya(editorder.biayahari);
     }//GEN-LAST:event_hapusbiayaActionPerformed
 
     private void resetbiayaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetbiayaActionPerformed
-        // TODO add your handling code here:
         reset();
         editbiaya.setEnabled(false);
         hapusbiaya.setEnabled(false);
         simpanbiaya.setEnabled(true);
         control_biaya.autoNumberBiaya(kodebiaya);
-        control_biaya.refreshJcomboBiaya(tambah.biayahari);
-        control_biaya.refreshJcomboBiaya(edit.biayahari);
+        control_biaya.refreshJcomboBiaya(addorder.biayahari);
+        control_biaya.refreshJcomboBiaya(editorder.biayahari);
     }//GEN-LAST:event_resetbiayaActionPerformed
 
     private void btnhomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhomeMouseClicked
-        // TODO add your handling code here:
         user.setVisible(false);
         home.setVisible(true);
         petugas.setVisible(false);
@@ -1759,7 +1747,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_btnhomeMouseClicked
 
     private void btnuserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnuserMouseClicked
-        // TODO add your handling code here:
         user.setVisible(true);
         home.setVisible(false);
         petugas.setVisible(false);
@@ -1775,7 +1762,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_btnuserMouseClicked
 
     private void btnpetugasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnpetugasMouseClicked
-        // TODO add your handling code here:
         user.setVisible(false);
         home.setVisible(false);
         petugas.setVisible(true);
@@ -1823,7 +1809,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_btnbiayaMouseClicked
 
     private void btnorderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnorderMouseClicked
-        // TODO add your handling code here:
         user.setVisible(false);
         home.setVisible(false);
         petugas.setVisible(false);
@@ -1839,7 +1824,6 @@ public class admin extends JFrame {
     }//GEN-LAST:event_btnorderMouseClicked
 
     private void tabelorderanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelorderanMouseClicked
-        // TODO add your handling code here:
         int barisTabelOrderan = tabelorderan.getSelectedRow();
         
         teleponpelanggan.setText(String.valueOf(tabelorderan.getValueAt(barisTabelOrderan, 1)));

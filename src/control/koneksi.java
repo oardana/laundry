@@ -6,16 +6,10 @@
 
 package control;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-//import org.json.*;
-
 /**
  *
  * @author ACER
@@ -36,22 +30,6 @@ public class koneksi {
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        new koneksi().getConnection();
     }
-//    public static JSONObject ObjectJson = null;
-//    public static JSONObject geturl(String search){
-//        try {
-//            HttpURLConnection con = (HttpURLConnection) new URL("http://www.omdbapi.com/?apikey=4cb6197c&s="+search+"").openConnection();
-//            con.setRequestMethod("GET");
-//            String input;
-//            StringBuffer respon = new StringBuffer();
-//            while ((input = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine()) != null ) {            
-//                respon.append(input);
-//            }
-//            ObjectJson = new JSONObject(respon.toString());
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//        return ObjectJson;
-//    }
 }
