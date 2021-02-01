@@ -20,7 +20,25 @@ public class addorder extends JFrame{
     control_orderan control_orderan;
     public addorder() {
         initComponents();
-        umum();
+        tanggal.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        jpetugas.setVisible(false);
+        bantar.setVisible(false);
+        bjemput.setVisible(false);
+        petugas.setVisible(false);
+        biayaantar.setVisible(false);
+        biayajemput.setVisible(false);
+        control_orderan = new control_orderan();
+        control_orderan.pilihCombo(layanan, "SELECT jenis_layanan FROM layanan");
+        control_orderan.pilihCombo(petugas, "SELECT nama_petugas FROM petugas_antar");
+        control_orderan.pilihCombo(biayahari, "SELECT biaya FROM biaya_tambahan");
+        control_orderan.autoNumberOrder(kodepelanggan, "KP", "SELECT * FROM pelanggan ORDER BY kode_pelanggan DESC");
+        control_orderan.autoNumberOrder(kodeorder, "KO", "SELECT * FROM pesan ORDER BY kode_order DESC");
+        addDate(3);
+        kodelayanan.setVisible(false);
+        enddate.setVisible(false);
+        biayalayanan.setEditable(false);
+        kodepelanggan.setVisible(false);
+        kodeorder.setVisible(false);
     }
 
     /**
@@ -247,27 +265,6 @@ public class addorder extends JFrame{
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    private void umum(){
-        tanggal.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-        jpetugas.setVisible(false);
-        bantar.setVisible(false);
-        bjemput.setVisible(false);
-        petugas.setVisible(false);
-        biayaantar.setVisible(false);
-        biayajemput.setVisible(false);
-        control_orderan = new control_orderan();
-        control_orderan.pilihCombo(layanan, "SELECT jenis_layanan FROM layanan");
-        control_orderan.pilihCombo(petugas, "SELECT nama_petugas FROM petugas_antar");
-        control_orderan.pilihCombo(biayahari, "SELECT biaya FROM biaya_tambahan");
-        control_orderan.autoNumberOrder(kodepelanggan, "KP", "SELECT * FROM pelanggan ORDER BY kode_pelanggan DESC");
-        control_orderan.autoNumberOrder(kodeorder, "KO", "SELECT * FROM pesan ORDER BY kode_order DESC");
-        addDate(3);
-        kodelayanan.setVisible(false);
-        enddate.setVisible(false);
-        biayalayanan.setEditable(false);
-        kodepelanggan.setVisible(false);
-        kodeorder.setVisible(false);
-    }
     private void cekAntarJemput(boolean cek){
         if(cek == true){
             jpetugas.setVisible(false);
@@ -346,7 +343,7 @@ public class addorder extends JFrame{
     }//GEN-LAST:event_teleponKeyTyped
 
     private void biayahariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_biayahariActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_biayahariActionPerformed
     
     private void reset(){

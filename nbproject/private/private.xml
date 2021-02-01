@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Java/Sistemlaundry/src/laundry/editorder.java</file>
-            <file>file:/D:/Java/Sistemlaundry/src/control/control_layanan.java</file>
+            <file>file:/D:/Java/Sistemlaundry/src/control/control_user.java</file>
             <file>file:/D:/Java/Sistemlaundry/src/laundry/addorder.java</file>
-            <file>file:/D:/Java/Sistemlaundry/src/control/control_biaya.java</file>
-            <file>file:/D:/Java/Sistemlaundry/src/control/control_petugas.java</file>
+            <file>file:/D:/Java/Sistemlaundry/src/control/koneksi.java</file>
             <file>file:/D:/Java/Sistemlaundry/src/laundry/admin.java</file>
         </group>
     </open-files>
